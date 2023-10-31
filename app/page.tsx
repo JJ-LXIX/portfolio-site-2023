@@ -4,7 +4,10 @@ import WorkSection from "@/components/WorkSection/WorkSection";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="h-screen w-full"></div>
+          <HeroText />
+
+          {/* Space Model */}
+          {laptopPlus ? <SpaceBoiModel /> : null}
       <WorkSection />
       <FooterSection />
     </main>
