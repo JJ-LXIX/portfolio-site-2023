@@ -7,8 +7,27 @@
   padding: 0;
 }
 
+main {
+  background-color: black;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7.5px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #141414;
 }
