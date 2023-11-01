@@ -8,9 +8,7 @@ import Wordle1 from "@/public/images/portfolio-work/wordle.jpg";
 import { useScreenSize } from "@/utils/hooks/useScreenSize";
 import WorkCard from "./WorkCard";
 
-type Props = {
-  setClickable: Dispatch<SetStateAction<boolean>>;
-};
+type Props = {};
 
 const WorkPortfolio = [
   {
@@ -65,7 +63,7 @@ const WorkPortfolio = [
   },
 ];
 
-export default function WorkSection({ setClickable }: Props) {
+export default function WorkSection({}: Props) {
   const laptopPlus = useScreenSize();
 
   return (
@@ -79,13 +77,7 @@ export default function WorkSection({ setClickable }: Props) {
           <div className="h-[90%] w-11/12  mx-auto grid grid-cols-5  grid-rows-3 gap-4">
             {/* Work Cards */}
             {WorkPortfolio.map((work, index) => {
-              return (
-                <WorkCard
-                  work={work}
-                  index={index}
-                  setClickable={setClickable}
-                />
-              );
+              return <WorkCard work={work} index={index} />;
             })}
           </div>
         </div>

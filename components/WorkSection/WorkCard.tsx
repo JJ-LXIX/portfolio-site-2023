@@ -14,10 +14,9 @@ type Props = {
     githubLink: string;
   };
   index: number;
-  setClickable: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function WorkCard({ work, index, setClickable }: Props) {
+export default function WorkCard({ work, index }: Props) {
   const [hovered, setHovered] = useState(false);
 
   return (
