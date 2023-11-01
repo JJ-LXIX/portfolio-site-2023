@@ -15,10 +15,6 @@ export default function HeroText({}: Props) {
     target: ref,
   });
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Page scroll: ", latest);
-  });
-
   const y = useTransform(scrollY, [0, 1100], ["0%", "80%"]);
   const y2 = useTransform(scrollY, [0, 1100], ["0", "-200%"]);
   return (
