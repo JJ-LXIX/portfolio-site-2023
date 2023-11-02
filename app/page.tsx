@@ -17,7 +17,7 @@ export default function Home() {
           <HeroText />
 
           {/* Space Model */}
-          {laptopPlus ? <SpaceBoiModel /> : null}
+          <SpaceBoiModel />
         </div>
         <WorkSection />
         <FooterSection />
@@ -26,11 +26,11 @@ export default function Home() {
         {laptopPlus ? (
           <>
             <CustomCursor />
-            <SmileySVG />
           </>
         ) : null}
 
         {/* Smiley SVG */}
+        <SmileySVG />
       </main>
     </ReactLenis>
   );
