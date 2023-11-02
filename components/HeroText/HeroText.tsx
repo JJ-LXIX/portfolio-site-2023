@@ -21,30 +21,30 @@ export default function HeroText({}: Props) {
     <motion.div className="absolute inset-0  z-20" ref={ref}>
       <motion.h1
         style={{ y }}
-        className="3xl:text-[13rem] text-white flex flex-col 3xl:ml-5"
+        className="text-center md:text-left text-[5rem] md:text-[9rem] lg:text-[10rem] 2xl:text-[12rem] 3xl:text-[13rem] md:ml-5  text-white flex flex-col"
       >
         Frontend
-        <span className="3xl:-mt-28">Web Dev.</span>
+        <span className="-mt-10 md:-mt-20 xl:-mt-24 3xl:-mt-28">Web Dev</span>
       </motion.h1>
       <motion.h2
         style={{ y: y2 }}
-        className="3xl:text-[10rem] text-white absolute flex flex-col right-10 bottom-10"
+        className=" w-full md:w-auto text-center md:text-right text-[5rem] md:text-[9rem] lg:text-[10rem] 3xl:text-[10rem] text-white absolute flex flex-col md:right-10 bottom-7 lg:bottom-10"
       >
-        Jagrath <span className="3xl:-mt-16 self-end">Shetty</span>
+        Jagrath <span className="-mt-8 md:-mt-14 lg:-mt-16">Shetty</span>
       </motion.h2>
 
       {/* CTA Button */}
-      <div className="absolute 3xl:left-10 3xl:bottom-40 flex 3xl:space-x-5 border-white text-white 3xl:text-3xl">
+      <div className="absolute px-10 lg:left-10 w-full md:w-auto bottom-64 md:bottom-[26rem] lg:bottom-56 3xl:left-10 3xl:bottom-40 flex justify-around space-x-5 lg:space-x-5 3xl:space-x-5 border-white text-white text-lg md:text-3xl lg:text-2xl 3xl:text-3xl">
         <Link
           href="https://github.com/JJ-LXIX"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="3xl:w-[13rem] 3xl:h-[6rem] border-2   hover:scale-105 active:scale-95 transition duration-300 bg-black hover:bg-white hover:text-black">
+          <button className="w-[7rem] h-[3rem] md:w-[14rem] md:h-[6rem] lg:w-[10rem] lg:h-[5rem] 2xl:w-[12rem] 2xl:h-[6rem] 3xl:w-[13rem] 3xl:h-[6rem] border-2   hover:scale-105 active:scale-95 transition duration-300 bg-black hover:bg-white hover:text-black">
             Github
           </button>
         </Link>
-        <button className="3xl:w-[13rem] 3xl:h-[6rem] border-2   hover:scale-105 active:scale-95 transition duration-300 bg-black hover:bg-white hover:text-black">
+        <button className="w-[7rem] h-[3rem]  md:w-[14rem] md:h-[6rem] lg:w-[10rem] lg:h-[5rem] 2xl:w-[12rem] 2xl:h-[6rem] 3xl:w-[13rem] 3xl:h-[6rem] border-2   hover:scale-105 active:scale-95 transition duration-300 bg-black hover:bg-white hover:text-black">
           Contact
         </button>
       </div>
