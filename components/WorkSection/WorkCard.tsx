@@ -23,7 +23,7 @@ export default function WorkCard({ work, index }: Props) {
     <motion.div
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index % 2 === 0 ? 0 : 0.3 }}
+      transition={{ duration: 0.5, delay: index % 2 === 0 ? 0 : 0.3 }}
       viewport={{ once: true }}
       key={work.title}
       className={work.classes}
@@ -40,7 +40,7 @@ export default function WorkCard({ work, index }: Props) {
             className="absolute inset-0 bg-black/70 z-20"
           >
             {/* Title */}
-            <div className="border-2 py-2 px-4 rounded-2xl text-white absolute left-5 top-5 border-white text-lg">
+            <div className="py-2 px-4 rounded-2xl text-white absolute left-5 top-5 text-3xl font-semibold">
               {work.title}
             </div>
             {/* Arrow */}
