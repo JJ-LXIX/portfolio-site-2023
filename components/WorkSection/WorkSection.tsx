@@ -94,6 +94,7 @@ export default function WorkSection({}: Props) {
                       alt={work.description}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 90vw, (max-width: 1024px) 90vw, 33vw"
                     />
                   </div>
                 </div>

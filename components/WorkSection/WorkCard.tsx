@@ -79,6 +79,11 @@ export default function WorkCard({ work, index }: Props) {
         fill
         src={work.image1}
         alt={work.description}
+        sizes={
+          index % 2 === 0 || index === 2
+            ? "90vw"
+            : "(max-width: 768px) 90vw, (max-width: 1024px) 90vw, 50vw"
+        }
       />
     </motion.div>
   );
