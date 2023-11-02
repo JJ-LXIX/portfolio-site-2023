@@ -1,22 +1,21 @@
-import {
-  useTransform,
-  motion,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { useScreenSize } from "@/utils/hooks/useScreenSize";
+import { motion } from "framer-motion";
 import React from "react";
 
 export const SmileySVG = () => {
+  const laptopPlus = useScreenSize();
   return (
     <svg
-      className="fixed top-10 right-0 mix-blend-difference"
-      width="200"
-      height="200"
+      className={`fixed  mix-blend-difference ${
+        laptopPlus ? "top-10 right-0" : "top-10 right-0"
+      }`}
+      width={laptopPlus ? "200" : "100"}
+      height={laptopPlus ? "200" : "100"}
       viewBox="0 0 210 297"
       version="1.1"
       id="svg1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsSvg="http://www.w3.org/2000/svg"
+      xmlnssvg="http://www.w3.org/2000/svg"
     >
       <defs id="defs1" />
       <g id="layer1">
