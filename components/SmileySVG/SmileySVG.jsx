@@ -6,7 +6,7 @@ export const SmileySVG = () => {
   const laptopPlus = useScreenSize();
   return (
     <svg
-      className={`fixed  mix-blend-difference ${
+      className={`fixed  mix-blend-difference z-50 ${
         laptopPlus ? "top-10 right-0" : "top-10 right-0"
       }`}
       width={laptopPlus ? "200" : "100"}
