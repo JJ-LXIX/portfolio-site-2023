@@ -40,9 +40,11 @@ export default function WorkCard({ work, index }: Props) {
             className="absolute inset-0 bg-black/70 z-20"
           >
             {/* Title */}
-            <div className="py-2 px-4 rounded-2xl text-white absolute left-5 top-5 text-3xl font-semibold">
-              {work.title}
-            </div>
+            <Link href={work.link} target="_blank" rel="noopener noreferrer">
+              <div className="cursor-pointer py-2 px-4 rounded-2xl text-white absolute left-5 top-5 text-3xl font-semibold">
+                {work.title}
+              </div>
+            </Link>
             {/* Arrow */}
             <Link href={work.link} target="_blank" rel="noopener noreferrer">
               <div className="icon">
@@ -66,7 +68,7 @@ export default function WorkCard({ work, index }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="absolute  py-2 px-4 rounded-2xl cursor-pointer text-lg font-semibold bg-blue-300 animate-pulse text-black right-5 top-5 hover:scale-110 active:scale-95 transition duration-300">
+              <div className="absolute  py-2 px-4 cursor-pointer text-lg font-semibold bg-black border-2 border-white animate-pulse text-white right-5 top-5 hover:scale-110 active:scale-95 transition duration-300">
                 Github
               </div>
             </Link>
