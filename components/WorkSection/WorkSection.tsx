@@ -67,8 +67,8 @@ export default function WorkSection({}: Props) {
   const laptopPlus = useScreenSize();
 
   return (
-    <div className="bg-[#ebfeff] rounded-3xl">
-      <div className=" h-[10vh] lg:h-[20vh] text-black bg-full  text-4xl text-center md:text-6xl lg:text-left pt-10 lg:pl-5 xl:pl-10 xl:text-7xl 2xl:text-8xl">
+    <div className="bg-zinc-950 rounded-3xl">
+      <div className=" h-[10vh] lg:h-[20vh] text-white bg-full  text-4xl text-center md:text-6xl lg:text-left pt-10 lg:pl-5 xl:pl-10 xl:text-7xl 2xl:text-8xl">
         Portfolio.
       </div>
       {laptopPlus ? (
