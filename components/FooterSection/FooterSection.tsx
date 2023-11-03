@@ -18,14 +18,15 @@ export default function FooterSection({}: Props) {
       </div>
       <p className="bg-zinc-950 w-full py-2 text-center  text-white">
         Website developed by me and Hero section art by
-        <span className="text-blue-300 ml-1">
-          <Link
-            href="https://sketchfab.com/silvercrow101"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></Link>
-          silvercrow101
-        </span>
+        <Link
+          href="https://sketchfab.com/silvercrow101"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="text-blue-300 ml-1 cursor-pointer">
+            silvercrow101
+          </span>
+        </Link>
       </p>
     </footer>
   );
