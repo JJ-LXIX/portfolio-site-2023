@@ -77,7 +77,7 @@ export default function WorkSection({}: Props) {
           <div className="h-[90%] w-11/12  mx-auto grid grid-cols-5  grid-rows-3 gap-4">
             {/* Work Cards */}
             {WorkPortfolio.map((work, index) => {
-              return <WorkCard work={work} index={index} />;
+              return <WorkCard key={index} work={work} index={index} />;
             })}
           </div>
         </div>
