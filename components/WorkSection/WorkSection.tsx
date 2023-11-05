@@ -116,12 +116,24 @@ export default function WorkSection({}: Props) {
                       sizes="(max-width: 768px) 90vw, (max-width: 1024px) 90vw, 33vw"
                     />
                     {/* Link Buttons */}
-                    <button className="z-50 w-24 h-12 md:w-48 md:h-20 bg-white text-lg font-semibold absolute left-10 bottom-10 active:scale-90 transition duration-300">
-                      Visit Site
-                    </button>
-                    <button className="z-50 w-24 h-12 md:w-48 md:h-20 bg-black border-2 border-white text-white text-lg font-semibold absolute right-10 bottom-10 active:scale-90 transition duration-300">
-                      Github
-                    </button>
+                    <Link
+                      href={work.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="z-50 w-24 h-12 md:w-48 md:h-20 bg-white text-lg font-semibold absolute left-10 bottom-10 active:scale-90 transition duration-300">
+                        Visit Site
+                      </button>
+                    </Link>
+                    <Link
+                      href={work.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="z-50 w-24 h-12 md:w-48 md:h-20 bg-black border-2 border-white text-white text-lg font-semibold absolute right-10 bottom-10 active:scale-90 transition duration-300">
+                        Github
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
