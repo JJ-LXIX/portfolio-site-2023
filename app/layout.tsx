@@ -26,6 +26,16 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: "Jagrath Shetty - Portfolio",
   description: "LXIX",
+  openGraph: {
+    title: "Jagrath Shetty - Portfolio",
+    description: "Frontend Development Portfolio",
+    images: "@/public/images/openGraph/opengraph-image.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    description: "Frontend Development Portfolio",
+    images: "@/public/images/openGraph/opengraph-image.jpg",
+  },
 };
 
 export default function RootLayout({
