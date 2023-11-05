@@ -5,8 +5,12 @@ import Dental1 from "@/public/images/portfolio-work/dentalSite1.png";
 import Poke1 from "@/public/images/portfolio-work/poke1.jpg";
 import JMovies1 from "@/public/images/portfolio-work/JMovies.jpg";
 import Wordle1 from "@/public/images/portfolio-work/wordle.jpg";
+import dentalMobile from "@/public/images/portfolio-work/dental2.jpg";
+import jmoviesMobile from "@/public/images/portfolio-work/jmovies2.jpg";
+import pokeMobile from "@/public/images/portfolio-work/pokeMobile.jpg";
 import { useScreenSize } from "@/utils/hooks/useScreenSize";
 import WorkCard from "./WorkCard";
+import Link from "next/link";
 
 type Props = {};
 
@@ -15,6 +19,7 @@ const WorkPortfolio = [
     title: "Jwitter",
     description: "Image of a Twitter Clone Website",
     image1: Jwitter1,
+    mobileImage: Jwitter1,
     techStack: ["NextJS", "Tailwind", "Typescript", "SWR", "Zustand"],
     classes:
       "col-span-2 row-span-1 rounded-xl relative overflow-hidden shadow-2xl",
@@ -25,6 +30,7 @@ const WorkPortfolio = [
     title: "Dental Website",
     description: "Image of a Website I made for a Dentist",
     image1: Dental1,
+    mobileImage: dentalMobile,
     techStack: ["NextJS", "Framer Motion", "Tailwind", "ShadcnUI"],
     classes:
       "col-span-3 row-span-1 rounded-xl relative overflow-hidden shadow-2xl",
@@ -35,6 +41,7 @@ const WorkPortfolio = [
     title: "Interactive Pokemon Website",
     description: "Image of an Interactive Pokemon Website",
     image1: Poke1,
+    mobileImage: pokeMobile,
     techStack: ["Vite", "Tailwind", "React Three Fiber", "React Three Drei"],
     classes:
       "col-span-5 row-span-1 rounded-xl relative overflow-hidden shadow-2xl",
@@ -45,6 +52,7 @@ const WorkPortfolio = [
     title: "JMovies",
     description: "Image of a movie trailer website",
     image1: JMovies1,
+    mobileImage: jmoviesMobile,
     techStack: ["ReactJS", "MovieDB API"],
     classes:
       "col-span-3 row-span-1 rounded-xl relative overflow-hidden shadow-2xl",
@@ -55,6 +63,7 @@ const WorkPortfolio = [
     title: "Wordle",
     description: "Image of a wordle clone website",
     image1: Wordle1,
+    mobileImage: Wordle1,
     techStack: ["ReactJS"],
     classes:
       "col-span-2 row-span-1 rounded-xl relative overflow-hidden shadow-2xl",
@@ -67,7 +76,7 @@ export default function WorkSection({}: Props) {
   const laptopPlus = useScreenSize();
 
   return (
-    <div className="bg-zinc-950 rounded-3xl">
+    <div className="bg-zinc-900 rounded-3xl">
       <div className=" h-[10vh] lg:h-[20vh] text-white bg-full  text-4xl text-center md:text-6xl lg:text-left pt-10 lg:pl-5 xl:pl-10 xl:text-7xl 2xl:text-8xl">
         Portfolio.
       </div>
@@ -94,8 +103,13 @@ export default function WorkSection({}: Props) {
                     <h3 className="absolute left-5 text-3xl top-6 z-30 text-white font-semibold">
                       {work.title}
                     </h3>
+                    {index === 2 ? (
+                      <h4 className="absolute left-5 text-lg top-28 z-30 text-white font-semibold">
+                        (Please visit through screens larger than 1350px wide)
+                      </h4>
+                    ) : null}
                     <Image
-                      src={work.image1}
+                      src={work.mobileImage}
                       alt={work.description}
                       fill
                       className="object-cover"
