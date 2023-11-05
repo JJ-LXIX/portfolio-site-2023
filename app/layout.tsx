@@ -24,6 +24,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jagrath.vercel.app/"),
   title: "Jagrath Shetty - Portfolio",
   description: "LXIX",
   openGraph: {
