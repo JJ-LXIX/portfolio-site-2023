@@ -6,7 +6,7 @@ import Poke1 from "@/public/images/portfolio-work/poke1.jpg";
 import JMovies1 from "@/public/images/portfolio-work/JMovies.jpg";
 import Wordle1 from "@/public/images/portfolio-work/wordle.jpg";
 import dentalMobile from "@/public/images/portfolio-work/dental2.jpg";
-import jmoviesMobile from "@/public/images/portfolio-work/jmovies2.jpg";
+import JMoviesMobile from "@/public/images/portfolio-work/JMovies2.jpg";
 import pokeMobile from "@/public/images/portfolio-work/pokeMobile.jpg";
 import { useScreenSize } from "@/utils/hooks/useScreenSize";
 import WorkCard from "./WorkCard";
@@ -52,7 +52,7 @@ const WorkPortfolio = [
     title: "JMovies",
     description: "Image of a movie trailer website",
     image1: JMovies1,
-    mobileImage: jmoviesMobile,
+    mobileImage: JMoviesMobile,
     techStack: ["ReactJS", "MovieDB API"],
     classes:
       "col-span-3 row-span-1 rounded-xl relative overflow-hidden shadow-2xl",
