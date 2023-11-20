@@ -11,12 +11,14 @@ export default function FooterSection({}: Props) {
           <p className="text-3xl md:text-5xl font-semibold">Project in Mind?</p>
           <p className="md:text-3xl">You can contact me to work with you!</p>
           <p className="text-md md:text-3xl">jagrathshettylxix@gmail.com</p>
-          <button className="px-4 py-2 w-36 h-12 md:h-20 md:w-44 md:text-xl border border-white hover:bg-white hover:text-black hover:scale-110 active:scale-95 duration-300 rounded-xl text-lg">
-            Get in Touch
-          </button>
+          <a href="mailto:jagrathshettylxix@gmail.com">
+            <button className="px-4 py-2 w-36 h-12 md:h-20 md:w-44 md:text-xl border border-white hover:bg-white hover:text-black hover:scale-110 active:scale-95 duration-300 rounded-xl text-lg">
+              Get in Touch
+            </button>
+          </a>
         </div>
       </div>
-      <p className="bg-zinc-950 w-full py-2 text-center  text-white">
+      <p className="bg-zinc-950 w-full p-2 text-center  text-white">
         Website developed by me and Hero section art by
         <Link
           href="https://sketchfab.com/silvercrow101"
