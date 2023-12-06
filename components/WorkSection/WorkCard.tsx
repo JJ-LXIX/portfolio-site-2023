@@ -32,47 +32,47 @@ export default function WorkCard({ work, index }: Props) {
     >
       <AnimatePresence>
         {hovered ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/70 z-20"
-          >
-            {/* Title */}
-            <Link href={work.link} target="_blank" rel="noopener noreferrer">
+          <Link href={work.link} target="_blank" rel="noopener noreferrer">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/70 z-20 cursor-pointer"
+            >
+              {/* Title */}
               <div className="cursor-pointer py-2 px-4 rounded-2xl text-white absolute left-5 top-5 text-3xl font-semibold">
                 {work.title}
               </div>
-            </Link>
-            {/* Arrow */}
-            <Link href={work.link} target="_blank" rel="noopener noreferrer">
+
+              {/* Arrow */}
               <div className="icon">
                 <div className="arrow"></div>
               </div>
-            </Link>
-            {/*Tech Stack */}
-            <div className="absolute bottom-5 left-2 3xl:left-5 flex space-x-2">
-              {work.techStack.map((tech) => (
-                <div
-                  key={tech}
-                  className="border-2 py-2 px-2 3xl:px-4 border-white rounded-2xl text-white flex items-center justify-center"
-                >
-                  {tech}
-                </div>
-              ))}
-            </div>
-            {/* Github Link */}
-            <Link
-              href={work.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="absolute  py-2 px-4 cursor-pointer text-lg font-semibold bg-black border-2 border-white animate-pulse text-white right-5 top-5 hover:scale-110 active:scale-95 transition duration-300">
-                Github
+
+              {/*Tech Stack */}
+              <div className="absolute bottom-5 left-2 3xl:left-5 flex space-x-2">
+                {work.techStack.map((tech) => (
+                  <div
+                    key={tech}
+                    className="border-2 py-2 px-2 3xl:px-4 border-white rounded-2xl text-white flex items-center justify-center"
+                  >
+                    {tech}
+                  </div>
+                ))}
               </div>
-            </Link>
-          </motion.div>
+              {/* Github Link */}
+              <Link
+                href={work.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="absolute  py-2 px-4 cursor-pointer text-lg font-semibold bg-black border-2 border-white animate-pulse text-white right-5 top-5 hover:scale-110 active:scale-95 transition duration-300">
+                  Github
+                </div>
+              </Link>
+            </motion.div>
+          </Link>
         ) : null}
       </AnimatePresence>
 
