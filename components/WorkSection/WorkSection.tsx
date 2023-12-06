@@ -10,7 +10,7 @@ import JMoviesMobile from "@/public/images/portfolio-work/JMovies2.jpg";
 import pokeMobile from "@/public/images/portfolio-work/pokeMobile.jpg";
 import { useScreenSize } from "@/utils/hooks/useScreenSize";
 import WorkCard from "./WorkCard";
-import Link from "next/link";
+import WorkCardMobile from "./WorkCardMobile";
 
 type Props = {};
 
@@ -92,52 +92,9 @@ export default function WorkSection({}: Props) {
         </div>
       ) : (
         // Mobile/Tablet screens
-        <div className=" min-h-[875vh] w-full">
+        <div className="w-full">
           {WorkPortfolio.map((work, index) => {
-            return (
-              <div key={index} className="h-[175vh] flex justify-center ">
-                <div className="h-[75vh] w-[90%] rounded-3xl overflow-hidden mt-10 sticky top-10 border-2 border-zinc-800">
-                  <div className="h-full w-full relative rounded-3xl overflow-hidden">
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/0 to-black/80 z-20"></div>
-                    <h3 className="absolute left-5 text-3xl top-6 z-30 text-white font-semibold">
-                      {work.title}
-                    </h3>
-                    {index === 2 ? (
-                      <h4 className="absolute left-5 text-lg top-28 z-30 text-white font-semibold">
-                        (Please visit through screens larger than 1350px wide)
-                      </h4>
-                    ) : null}
-                    <Image
-                      src={work.mobileImage}
-                      alt={work.description}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 90vw, (max-width: 1024px) 90vw, 33vw"
-                    />
-                    {/* Link Buttons */}
-                    <Link
-                      href={work.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="z-50 w-24 h-12 md:w-48 md:h-20 bg-white text-lg font-semibold absolute left-10 bottom-10 active:scale-90 transition duration-300">
-                        Visit Site
-                      </button>
-                    </Link>
-                    <Link
-                      href={work.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="z-50 w-24 h-12 md:w-48 md:h-20 bg-black border-2 border-white text-white text-lg font-semibold absolute right-10 bottom-10 active:scale-90 transition duration-300">
-                        Github
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            );
+            return <WorkCardMobile key={index} work={work} index={index} />;
           })}
         </div>
       )}
