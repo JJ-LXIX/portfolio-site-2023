@@ -44,7 +44,13 @@ export default function HeroText({}: Props) {
             Github
           </button>
         </Link>
-        <button className="w-[7rem] h-[3rem]  md:w-[14rem] md:h-[6rem] lg:w-[10rem] lg:h-[5rem] 2xl:w-[12rem] 2xl:h-[6rem] 3xl:w-[13rem] 3xl:h-[6rem] border-2   hover:scale-105 active:scale-95 transition duration-300 bg-black hover:bg-white hover:text-black">
+
+        <button
+          onClick={() =>
+            (window.location.href = "mailto:jagrathshettylxix@gmail.com")
+          }
+          className="w-[7rem] h-[3rem]  md:w-[14rem] md:h-[6rem] lg:w-[10rem] lg:h-[5rem] 2xl:w-[12rem] 2xl:h-[6rem] 3xl:w-[13rem] 3xl:h-[6rem] border-2   hover:scale-105 active:scale-95 transition duration-300 bg-black hover:bg-white hover:text-black"
+        >
           Contact
         </button>
       </div>

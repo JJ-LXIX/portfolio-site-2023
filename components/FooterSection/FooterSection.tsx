@@ -11,7 +11,12 @@ export default function FooterSection({}: Props) {
           <p className="text-3xl md:text-5xl font-semibold">Project in Mind?</p>
           <p className="md:text-3xl">You can contact me to work with you!</p>
           <a href="mailto:jagrathshettylxix@gmail.com">
-            <button className="px-4 py-2 w-36 h-12 md:h-20 md:w-44 md:text-xl border border-white hover:bg-white hover:text-black hover:scale-110 active:scale-95 duration-300 rounded-xl text-lg">
+            <button
+              onClick={() =>
+                (window.location.href = "mailto:jagrathshettylxix@gmail.com")
+              }
+              className="px-4 py-2 w-36 h-12 md:h-20 md:w-44 md:text-xl border border-white hover:bg-white hover:text-black hover:scale-110 active:scale-95 duration-300 rounded-xl text-lg"
+            >
               Get in Touch
             </button>
           </a>
