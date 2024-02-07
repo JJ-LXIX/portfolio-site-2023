@@ -18,7 +18,7 @@ export default function HeroText({}: Props) {
   const y = useTransform(scrollY, [0, 1100], ["0%", "80%"]);
   const y2 = useTransform(scrollY, [0, 1100], ["0", "-200%"]);
   return (
-    <motion.div className="absolute inset-0  z-20" ref={ref}>
+    <div className="absolute inset-0  z-20" ref={ref}>
       <motion.h1
         style={{ y }}
         className="text-center md:text-left text-[5rem] md:text-[9rem] lg:text-[10rem] 2xl:text-[12rem] 3xl:text-[13rem] md:ml-5  text-white flex flex-col"
@@ -54,6 +54,6 @@ export default function HeroText({}: Props) {
           Contact
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 }
