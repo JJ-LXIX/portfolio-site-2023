@@ -172,13 +172,13 @@ export function SpaceModel(props) {
           rotation={[-Math.PI / 2, 0, 0]}
           scale={11.437}
         />
-        <mesh
+        {/* <mesh
           geometry={nodes.Cube_Material001_0.geometry}
           material={materials["Material.001"]}
           position={[0, -101.673, 0]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={[1120.013, 1120.013, 100]}
-        />
+        /> */}
         <mesh
           geometry={nodes.Sphere003_Material002_0.geometry}
           material={materials["Material.002"]}
