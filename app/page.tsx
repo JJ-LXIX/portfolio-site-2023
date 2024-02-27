@@ -11,27 +11,22 @@ import { SmileySVG } from "@/components/SmileySVG/SmileySVG";
 export default function Home() {
   const laptopPlus = useScreenSize();
   return (
-    <ReactLenis root>
-      <main className="min-h-screen">
-        <div className="h-screen w-full relative">
-          <HeroText />
+    <>
+      <ReactLenis root>
+        <main>
+          <div className="h-screen w-full relative">
+            <HeroText />
+            <SpaceBoiModel />
+          </div>
+          <WorkSection />
+          <FooterSection />
 
-          {/* Space Model */}
-          <SpaceBoiModel />
-        </div>
-        <WorkSection />
-        <FooterSection />
+          {/* Custom Cursor */}
+          {laptopPlus ? <CustomCursor /> : null}
 
-        {/* Custom Cursor */}
-        {laptopPlus ? (
-          <>
-            <CustomCursor />
-          </>
-        ) : null}
-
-        {/* Smiley SVG */}
-        <SmileySVG />
-      </main>
-    </ReactLenis>
+          <SmileySVG />
+        </main>
+      </ReactLenis>
+    </>
   );
 }
