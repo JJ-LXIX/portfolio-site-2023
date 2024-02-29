@@ -2,14 +2,20 @@
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import FooterSection from "@/components/FooterSection/FooterSection";
 import HeroText from "@/components/HeroText/HeroText";
-import SpaceBoiModel from "@/components/R3FModel/SpaceBoiModel";
 import WorkSection from "@/components/WorkSection/WorkSection";
 import { useScreenSize } from "@/utils/hooks/useScreenSize";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { SmileySVG } from "@/components/SmileySVG/SmileySVG";
+import dynamic from "next/dynamic";
+
+const SpaceBoiModel = dynamic(
+  () => import("@/components/R3FModel/SpaceBoiModel"),
+  { ssr: false }
+);
 
 export default function Home() {
   const laptopPlus = useScreenSize();
+
   return (
     <>
       <ReactLenis root>
@@ -18,6 +24,7 @@ export default function Home() {
             <HeroText />
             <SpaceBoiModel />
           </div>
+
           <WorkSection />
           <FooterSection />
 
