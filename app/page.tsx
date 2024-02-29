@@ -6,12 +6,7 @@ import WorkSection from "@/components/WorkSection/WorkSection";
 import { useScreenSize } from "@/utils/hooks/useScreenSize";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { SmileySVG } from "@/components/SmileySVG/SmileySVG";
-import dynamic from "next/dynamic";
-
-const SpaceBoiModel = dynamic(
-  () => import("@/components/R3FModel/SpaceBoiModel"),
-  { ssr: false }
-);
+import SpaceBoiModel from "@/components/R3FModel/SpaceBoiModel";
 
 export default function Home() {
   const laptopPlus = useScreenSize();
