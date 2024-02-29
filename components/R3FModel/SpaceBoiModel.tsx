@@ -9,7 +9,7 @@ export default function SpaceBoiModel({}: Props) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 3 }}
       className="h-screen w-full relative"
     >
       <Canvas>
