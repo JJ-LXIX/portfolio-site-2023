@@ -6,7 +6,7 @@ License: CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
 Source: https://sketchfab.com/3d-models/space-boi-f6a8c6a6727b4f2cb020c8b50bb2ee60
 Title: space boi
 */
-
+"use client";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import useMousePosition from "@/utils/hooks/useMousePosition";
